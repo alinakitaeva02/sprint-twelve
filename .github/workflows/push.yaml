@@ -40,6 +40,11 @@ jobs:
         uses: docker/metadata-action@v5.5.1
         with:
           images: alinakitaeva02/sprint-twelve
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and push Docker Image
         uses: docker/build-push-action@v5
