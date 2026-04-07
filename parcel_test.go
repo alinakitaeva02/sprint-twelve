@@ -117,7 +117,7 @@ func TestSetStatus(t *testing.T) {
 	require.Equal(t, ParcelStatusSent, stored.Status)
 }
 
-// TestGetByClient проверяет получение посылок по идентификатору клиента
+// TestGetByClient проверяет получение посылок по идентификатору кли
 func TestGetByClient(t *testing.T) {
 	// prepare
 	db, err := sql.Open("sqlite", "tracker.db")
